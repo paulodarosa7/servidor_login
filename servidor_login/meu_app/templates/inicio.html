@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container">
+
+    <nav>
+      {{request.user.username}}
+    <nav>
+<h1>Olá {{ request.user.first_name}}! Seja bem vindo! </h1>
+        <p>Você está na página inicial do sistema.</p>
+        <p>Esta é uma aplicação de exemplo para demonstrar o uso de autenticação e autorização com Django.</p>
+        
+        <p>clique no botão abaixo para sair:</p>
+        <a href="{% url 'logout' %}" class="btn">Sair</a>
+    {% comment %} isso sodeve aparecer se fizer login {% endcomment %}
+</div>
+{% endblock %}

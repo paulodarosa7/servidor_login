@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<form method="post" action="{% url 'welcome' %}">
+    {% csrf_token %}
+    <div class="container">
+        <h1>Seja Bem-vindo!</h1>
+        <p>Escolha uma das opções abaixo para continuar:</p>
+        <a href="/cadastro" class="btn">Cadastrar</a>
+        <a href="/login" class="btn btn-secondary">Entrar</a>
+    </div>
+</form>
+{% endblock %}
