@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User # isso é uma função base do Django
 
 # Create your models here.
 class Usuario(models.Model):
